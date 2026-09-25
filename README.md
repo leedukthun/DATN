@@ -1,6 +1,6 @@
 # PHÁT HIỆN KHÔNG ĐỘI MŨ
 
-MVP Web phát hiện người điều khiển xe máy không đội mũ bảo hiểm từ ảnh/video, được xây dựng theo bản phác thảo giao diện và đặc tả đồ án đi kèm.
+Ứng dụng web phát hiện người điều khiển xe máy không đội mũ bảo hiểm từ ảnh/video.
 
 ## Chức năng đã có
 

@@ -30,3 +30,32 @@ Thumbs.db
 
 # VS Code machine-local overrides
 .vscode/*.local.json
+
+# Local reports, training notebooks and generated document images
+*.doc
+*.docx
+*.dox
+*.pdf
+*.ipynb
+/docs/
+/ch2_build/
+/chapter1_render/
+/review_ch23/
+/review_full_*/
+/chapter1_shortened.py
+/fix_auth.js
+
+# Development notes not needed to install or run the application
+/DOWNLOAD_BUG_FIX.md
+/DOWNLOAD_QUICK_FIX.md
+/IMPLEMENTATION_NOTES.md
+/INDEX_OPTIMIZATION.md
+/QUICK_OPTIMIZATION.md
+/TESTING_VALIDATION.md
+/VIDEO_OPTIMIZATION_GUIDE.md
+
+# Standalone local images (application assets remain trackable)
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
