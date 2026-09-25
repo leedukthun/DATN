@@ -1,0 +1,405 @@
+{
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "2.3. Công nghệ và công cụ xây dựng hệ thống"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đề tài kết hợp công cụ huấn luyện mô hình, xử lý ảnh và video với công nghệ xây dựng ứng dụng web, nhằm tiếp nhận dữ liệu, lưu kết quả nhận diện và thống kê theo địa điểm, thời gian."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.3.1. Python, Ultralytics và OpenCV"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python được dùng cho notebook huấn luyện và các chức năng xử lý phía máy chủ: nạp mô hình, nhận diện, liên kết vùng đầu với xe, tracking và tổng hợp kết quả. Ultralytics hỗ trợ nạp checkpoint, huấn luyện, đánh giá và chạy dự đoán bằng YOLO. Đầu ra gồm hộp giới hạn, nhãn lớp và độ tin cậy, cung cấp dữ liệu cho bước kiểm tra quan hệ giữa vùng đầu và xe máy."
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenCV đảm nhiệm việc đọc ảnh, video, lấy khung hình, thay đổi kích thước, vẽ kết quả, cắt ảnh minh chứng và ghi video đầu ra. Trong quy trình chung, OpenCV chuẩn bị khung hình; Ultralytics thực hiện phát hiện; các chức năng Python liên kết, theo dõi và tổng hợp; sau đó OpenCV lưu kết quả trực quan. Việc cùng sử dụng Python giúp tích hợp mô hình với ứng dụng web và cơ chế lưu trữ."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.3.2. Google Colab và Google Drive trong huấn luyện mô hình"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google Colab là môi trường notebook trực tuyến dùng để chạy mã Python, có thể cung cấp GPU tùy phiên làm việc. Notebook của đề tài thực hiện các bước kết nối dữ liệu, kiểm tra môi trường, nạp checkpoint hai lớp, huấn luyện trên dữ liệu ba lớp và đánh giá kết quả. Google Drive lưu dữ liệu, trọng số ban đầu, checkpoint và các tệp đánh giá để hạn chế mất kết quả khi phiên Colab bị ngắt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Khi báo cáo thực nghiệm, cần ghi thông tin từ lần chạy thực tế: phần cứng được cấp, phiên bản thư viện, số epoch hoàn thành và tập dữ liệu đánh giá. Checkpoint ba lớp được lựa chọn sau huấn luyện và đánh giá sẽ được đưa vào ứng dụng để phân tích ảnh, video tải lên."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.3.3. Công nghệ xây dựng hệ thống"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ứng dụng web gồm backend, frontend và cơ sở dữ liệu. Backend được xây dựng bằng Python và FastAPI để cung cấp API quản lý tài khoản, dự án, địa điểm, tệp và phiên phân tích; kiểm tra dữ liệu đầu vào; chạy mô hình; lưu minh chứng và trả kết quả. Frontend giao tiếp với backend qua API HTTP theo hướng REST: dữ liệu quản lý, kết quả sử dụng JSON, còn ảnh và video tải lên bằng `multipart/form-data`. Với video xử lý lâu, backend chạy tác vụ nền; giao diện định kỳ truy vấn trạng thái để hiển thị tiến độ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Frontend sử dụng React, TypeScript và Vite. React tổ chức giao diện thành các thành phần như biểu mẫu, danh sách tệp, biểu đồ và khu vực xem minh chứng; TypeScript mô tả cấu trúc dữ liệu và hỗ trợ phát hiện lỗi kiểu; Vite phục vụ phát triển và đóng gói giao diện. Các công nghệ này được dùng cho trang đăng nhập, quản lý dự án, địa điểm, tải dữ liệu, xem kết quả và thống kê."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hệ thống dùng SQLite trong cấu hình mặc định và SQLAlchemy để thao tác dữ liệu. SQLite lưu dữ liệu trên tệp, phù hợp quy mô đồ án; SQLAlchemy quản lý các thực thể như người dùng, dự án, địa điểm, phiên phân tích, tệp và trường hợp được ghi nhận. Nội dung ảnh, video, minh chứng nằm trong thư mục trên máy chủ; cơ sở dữ liệu lưu thông tin mô tả và đường dẫn. Cách tổ chức này cho phép truy xuất lịch sử, kiểm tra kết quả và tổng hợp số liệu."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "2.4. Các tiêu chí và chỉ số đánh giá"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đánh giá được thực hiện ở hai cấp. Cấp mô hình xem xét khả năng định vị và phân loại *helmet*, *no-helmet*, *bike*. Cấp hệ thống kiểm tra việc ghi nhận đúng trường hợp cần tìm, hạn chế nhầm người đi bộ, đếm trùng và sai số thống kê. Tập validation phục vụ lựa chọn mô hình, tham số; tập test độc lập dùng để đánh giá cuối cùng. Nếu chỉ có validation, báo cáo phải ghi rõ giới hạn này."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.4.1. Chỉ số IoU và cách xác định phát hiện đúng, báo nhầm, bỏ sót"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.1.1. Chỉ số IoU"
+    },
+    {
+      "type": "paragraph",
+      "text": "IoU (*Intersection over Union*) đo mức chồng lấp giữa hộp dự đoán B_p và hộp đối chứng B_g:"
+    },
+    {
+      "type": "equation",
+      "number": "2.10",
+      "text": "IoU=\\frac{|B_p\\cap B_g|}{|B_p\\cup B_g|}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Giá trị nằm trong khoảng 0–1; càng cao, hai hộp càng phù hợp về vị trí và kích thước. IoU chỉ phản ánh hình học, nên một phát hiện đúng còn phải có nhãn lớp phù hợp."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.1.2. Xác định TP, FP và FN"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tại ngưỡng độ tin cậy và IoU đã chọn:"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Ký hiệu",
+          "Ý nghĩa",
+          "Cách xác định"
+        ],
+        [
+          "TP (*True Positive*)",
+          "Phát hiện đúng",
+          "Dự đoán đúng lớp và ghép được với đối tượng đối chứng tại ngưỡng IoU"
+        ],
+        [
+          "FP (*False Positive*)",
+          "Phát hiện sai hoặc thừa",
+          "Dự đoán không ghép được với đối tượng đối chứng phù hợp"
+        ],
+        [
+          "FN (*False Negative*)",
+          "Bỏ sót",
+          "Đối tượng đối chứng không có dự đoán phù hợp được ghép"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Mỗi đối tượng đối chứng chỉ được ghép với tối đa một dự đoán TP; các dự đoán dư có thể là FP. Dự đoán sai lớp có thể đồng thời tạo FP ở lớp dự đoán và FN ở lớp thực tế. Cần phân biệt cấp mô hình với cấp hệ thống: vùng đầu người đi bộ được phát hiện đúng là *no-helmet* vẫn trở thành báo nhầm ở cấp hệ thống nếu bị ghi nhận là trường hợp đi xe máy không đội mũ."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.4.2. Precision, Recall và F1-score"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.2.1. Precision"
+    },
+    {
+      "type": "paragraph",
+      "text": "Precision là tỷ lệ TP trong các dự đoán được đưa ra:"
+    },
+    {
+      "type": "equation",
+      "number": "2.11",
+      "text": "Precision=\\frac{TP}{TP+FP}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Chỉ số cao cho thấy ít phát hiện sai. Ở cấp hệ thống, Precision của các trường hợp không đội mũ còn chịu tác động của bước liên kết và xác nhận qua video."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.2.2. Recall"
+    },
+    {
+      "type": "paragraph",
+      "text": "Recall là tỷ lệ TP trong các đối tượng thực tế:"
+    },
+    {
+      "type": "equation",
+      "number": "2.12",
+      "text": "Recall=\\frac{TP}{TP+FN}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Recall cao cho thấy ít bỏ sót. Cần xem Recall của cả *no-helmet* và *bike*: nếu bỏ sót xe máy, hệ thống có thể không xác nhận được vùng đầu không mũ dù đã phát hiện đúng trạng thái."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.2.3. F1-score"
+    },
+    {
+      "type": "paragraph",
+      "text": "F1-score là trung bình điều hòa của Precision và Recall:"
+    },
+    {
+      "type": "equation",
+      "number": "2.13",
+      "text": "F1=\\frac{2\\,Precision\\,Recall}{Precision+Recall}"
+    },
+    {
+      "type": "paragraph",
+      "text": "F1 nằm trong khoảng 0–1. Khi mẫu số bằng 0, cần nêu quy ước của công cụ đánh giá. Ví dụ, với 18 TP, 2 FP và 3 FN, Precision bằng 0,90; Recall xấp xỉ 0,857 và F1 xấp xỉ 0,878. Đây chỉ là ví dụ cách tính."
+    },
+    {
+      "type": "paragraph",
+      "text": "Với mô hình nhiều lớp, báo cáo chỉ số của từng lớp và trung bình. Trung bình các F1 theo lớp không nhất thiết bằng F1 tính từ Precision trung bình và Recall trung bình; notebook của đề tài ưu tiên trung bình các F1 theo lớp do thư viện trả về. Ngoài ra, các chỉ số phụ thuộc ngưỡng độ tin cậy. Không nên mặc định Precision, Recall và F1 từ `val()` tương ứng với ngưỡng dự đoán 0,25, vì Ultralytics chọn điểm báo cáo theo đường cong đánh giá."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.4.3. mAP@50 và mAP@50–95"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.3.1. AP và mAP"
+    },
+    {
+      "type": "paragraph",
+      "text": "Khi thay đổi ngưỡng độ tin cậy, Precision và Recall tạo thành đường cong Precision–Recall. AP (*Average Precision*) tổng hợp chất lượng phát hiện của một lớp theo diện tích dưới đường cong với quy tắc nội suy của bộ đánh giá. Với C lớp và ngưỡng IoU τ, mAP là trung bình AP:"
+    },
+    {
+      "type": "equation",
+      "number": "2.14",
+      "text": "mAP_{\\tau}=\\frac{1}{C}\\sum_{c=1}^{C}AP_c(\\tau)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.3.2. mAP@50"
+    },
+    {
+      "type": "paragraph",
+      "text": "mAP@50 dùng ngưỡng IoU 0,50. Chỉ số tổng hợp chất lượng phát hiện các lớp qua nhiều ngưỡng độ tin cậy, không phải tỷ lệ trường hợp không đội mũ được hệ thống xác định đúng. Chẳng hạn, mAP@50 bằng 0,90 không có nghĩa hệ thống xác định đúng 90% trường hợp cần ghi nhận."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.3.3. mAP@50–95"
+    },
+    {
+      "type": "paragraph",
+      "text": "mAP@50–95 là trung bình mAP tại 10 ngưỡng IoU từ 0,50 đến 0,95, bước 0,05:"
+    },
+    {
+      "type": "equation",
+      "number": "2.15",
+      "text": "mAP_{50:95}=\\frac{1}{10}\\sum_{k=0}^{9}mAP_{\\,0{,}50+0{,}05k}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ngưỡng IoU cao yêu cầu vị trí hộp dự đoán chính xác hơn. Khi so sánh mô hình hai lớp với ba lớp, cần đánh giá hai lớp chung *helmet*, *no-helmet* trên cùng tập ảnh, cùng quy tắc nhãn và ánh xạ đúng ID. Lớp *bike* được báo cáo riêng; có thể trình bày thêm mAP tổng hợp ba lớp. Không thể chỉ so sánh trực tiếp một giá trị mAP trung bình hai lớp với một giá trị mAP trung bình ba lớp rồi kết luận mức cải tiến."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.4.4. Ma trận nhầm lẫn, đường cong đánh giá và kết quả theo từng lớp"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.4.1. Ma trận nhầm lẫn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ma trận nhầm lẫn cho thấy quan hệ giữa lớp đối chứng và lớp dự đoán. Trong biểu đồ Ultralytics, trục ngang là lớp thực tế, trục dọc là lớp dự đoán. Các ô đường chéo thể hiện ghép đúng; ô ngoài đường chéo thể hiện nhầm lớp. Cột *background* biểu diễn dự đoán không ghép được, còn hàng *background* biểu diễn đối tượng bị bỏ sót. Nên xem cả số lượng và tỷ lệ để nhận biết nhầm lẫn giữa *helmet*, *no-helmet* cũng như mức bỏ sót *bike*."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.4.2. Các đường cong đánh giá"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Đường cong",
+          "Nội dung thể hiện"
+        ],
+        [
+          "Precision–Recall",
+          "Quan hệ giữa Precision và Recall"
+        ],
+        [
+          "Precision–Confidence",
+          "Precision theo ngưỡng độ tin cậy"
+        ],
+        [
+          "Recall–Confidence",
+          "Recall theo ngưỡng độ tin cậy"
+        ],
+        [
+          "F1–Confidence",
+          "F1 theo ngưỡng độ tin cậy"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Các đường cong hỗ trợ chọn ngưỡng cân bằng báo nhầm và bỏ sót. Ngưỡng nên được chọn trên validation, sau đó giữ cố định khi kiểm thử. Do mục tiêu của đề tài là giảm nhầm người đi bộ, cần xem thêm kết quả cuối cùng sau bước liên kết, không chỉ đường cong của mô hình."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.4.3. Kết quả theo từng lớp"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bảng đánh giá cần nêu số đối tượng đối chứng, Precision, Recall, F1, AP@50 và AP@50–95 của từng lớp, bên cạnh chỉ số trung bình. Cần đối chiếu trực quan một số ảnh dự đoán với nhãn thực tế, nhất là cảnh người đi bộ gần xe, nhiều phương tiện, đối tượng nhỏ và bị che khuất. Việc này giúp phát hiện hạn chế mà chỉ số trung bình có thể che lấp."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.4.5. Đánh giá hệ thống: sai số đếm, thời gian xử lý và kiểm thử chức năng"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.5.1. Đánh giá ghi nhận đúng và sai số đếm"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kết quả hệ thống được đối chiếu với kiểm tra thủ công trên cùng ảnh hoặc video và cùng đơn vị đếm. Số lượt xe có người không đội mũ không đồng nhất với số người không đội mũ; tổng hộp phát hiện qua các khung hình cũng không phải số đối tượng duy nhất."
+    },
+    {
+      "type": "paragraph",
+      "text": "Với mẫu thứ i, gọi n̂_i là số lượng hệ thống ghi nhận và n_i là số lượng đối chứng. Sai số tuyệt đối và sai số tuyệt đối trung bình trên M mẫu là:"
+    },
+    {
+      "type": "equation",
+      "number": "2.16",
+      "text": "e_i=|\\hat n_i-n_i|"
+    },
+    {
+      "type": "equation",
+      "number": "2.17",
+      "text": "MAE=\\frac{1}{M}\\sum_{i=1}^{M}e_i"
+    },
+    {
+      "type": "paragraph",
+      "text": "MAE nhỏ cho thấy số đếm gần đối chứng, nhưng tổng đúng chưa chứng minh từng trường hợp đều đúng: một báo nhầm và một bỏ sót có thể triệt tiêu nhau. Do đó, cần thống kê riêng ghi nhận đúng, báo nhầm, bỏ sót và đếm trùng. Bộ kiểm thử phải có cảnh chỉ có người đi bộ, người đi bộ gần xe, xe bị che khuất hoặc không được phát hiện."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.5.2. Thời gian và tốc độ xử lý"
+    },
+    {
+      "type": "paragraph",
+      "text": "Thời gian xử lý toàn trình được đo từ lúc máy chủ bắt đầu xử lý tệp đã tải lên đến khi lưu xong kết quả; bao gồm đọc dữ liệu, nhận diện, liên kết, tracking, ghi ảnh hoặc video và lưu thông tin. Nếu báo cáo tốc độ suy luận riêng của mô hình, sử dụng:"
+    },
+    {
+      "type": "equation",
+      "number": "2.18",
+          "text": "FPS_{\\mathrm{suy\\ luan}}=\\frac{N_{\\mathrm{suy\\ luan}}}{T_{\\mathrm{suy\\ luan}}}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong đó, N_suy luận là số khung thực sự đưa qua mô hình, T_suy luận là tổng thời gian suy luận tính bằng giây. FPS suy luận không thay thế thời gian xử lý toàn hệ thống. Khi so sánh cần ghi phần cứng, độ phân giải, thời lượng video và bước lấy mẫu."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.4.5.3. Kiểm thử chức năng"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kiểm thử chức năng dựa trên các thao tác sử dụng chính:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bảng 2.3. Chức năng hệ thống"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Nhóm chức năng",
+          "Nội dung cần kiểm tra"
+        ],
+        [
+          "Quản lý dữ liệu",
+          "Tạo, cập nhật và truy xuất đúng dự án, địa điểm"
+        ],
+        [
+          "Tải ảnh, video",
+          "Tiếp nhận tệp hợp lệ, thông báo dữ liệu không phù hợp"
+        ],
+        [
+          "Xử lý dữ liệu",
+          "Cập nhật trạng thái, tiến độ, kết quả hoặc lỗi"
+        ],
+        [
+          "Hiển thị kết quả",
+          "Hiển thị đúng ảnh, video, số lượng và minh chứng"
+        ],
+        [
+          "Thống kê",
+          "Tổng hợp đúng theo địa điểm, thời gian đã chọn"
+        ],
+        [
+          "Xuất kết quả",
+          "Tải được tệp kết quả phù hợp với phiên phân tích"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Mỗi trường hợp kiểm thử cần ghi dữ liệu đầu vào, kết quả mong đợi, kết quả thực tế và trạng thái đạt hoặc chưa đạt. Các số liệu đo và so sánh hai phương án được trình bày trong chương thực nghiệm."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "2.5. Kết luận chương 2"
+    },
+    {
+      "type": "paragraph",
+      "text": "Chương 2 đã trình bày cơ sở phát hiện đối tượng bằng YOLO, dữ liệu gán nhãn, học chuyển giao và huấn luyện tinh chỉnh mô hình từ hai lớp lên ba lớp. Sau nhận diện, liên kết vùng đầu với xe máy, Centroid Tracking và xác nhận qua nhiều khung hình hỗ trợ giảm nhầm người đi bộ và hạn chế đếm trùng. Các công nghệ Python, Ultralytics, OpenCV, Google Colab, FastAPI, React, TypeScript, Vite, SQLAlchemy và SQLite được sử dụng theo vai trò tương ứng trong hệ thống."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bộ tiêu chí gồm IoU, Precision, Recall, F1, mAP, ma trận nhầm lẫn, sai số đếm, tốc độ xử lý và kiểm thử chức năng cho phép đánh giá cả mô hình lẫn kết quả hệ thống. Đây là cơ sở để trình bày kiến trúc, cơ sở dữ liệu, quy trình hoạt động và thực nghiệm ở các chương tiếp theo."
+    }
+  ]
+}

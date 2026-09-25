@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+backend/.env
+frontend/.env
+backend/helmet_detection.db
+
+# Storage generated at runtime
+backend/storage/uploads/*
+backend/storage/results/*
+backend/storage/violations/*
+backend/storage/exports/*
+backend/storage/diagnostics/
+!backend/storage/**/.gitkeep
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+frontend/.env.local
+
+# Editors / OS
+.idea/
+.DS_Store
+Thumbs.db
+
+# VS Code machine-local overrides
+.vscode/*.local.json

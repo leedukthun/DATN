@@ -1,0 +1,28 @@
+KẾT QUẢ FINE-TUNE YOLO11 TỪ BEST.PT 2 LỚP - finetune_best_2_to_3_lan_1
+=======================================================
+Model gốc           : /content/drive/MyDrive/Colab/models/best_2classes.pt
+Epoch               : 100
+Image size          : 640
+Batch size          : 16
+GPU                 : Tesla T4
+Số lớp              : 3
+Tên lớp             : ['bike', 'helmet', 'no-helmet']
+Thời gian train     : 173.95 phút
+
+KẾT QUẢ ĐÁNH GIÁ (test)
+Precision           : 0.9028
+Recall              : 0.8711
+F1-score            : 0.8861
+mAP@50              : 0.9341
+mAP@50-95           : 0.6770
+
+MA TRẬN NHẦM LẪN
+- danh_gia_best/confusion_matrix.png
+- danh_gia_best/confusion_matrix_normalized.png
+
+KIỂM THỬ THỰC TẾ
+Trạng thái          : Đã chạy
+Dữ liệu đầu vào     : /content/drive/MyDrive/Colab/du_lieu_thuc_te
+Kết quả nhận diện   : /content/drive/MyDrive/Colab/YOLO11_Helmet_Independent_Runs/finetune_best_2_to_3_lan_1/ket_qua_thuc_te
+
+Đường dẫn best.pt   : /content/drive/MyDrive/Colab/YOLO11_Helmet_Independent_Runs/finetune_best_2_to_3_lan_1/weights/best.pt

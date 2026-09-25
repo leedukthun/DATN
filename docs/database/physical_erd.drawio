@@ -1,0 +1,1273 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" compressed="false">
+  <diagram id="physical-erd" name="CSDL mức vật lý">
+    <mxGraphModel dx="2660" dy="1880" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2660" pageHeight="1880" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SƠ ĐỒ CƠ SỞ DỮ LIỆU MỨC VẬT LÝ" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=46;fontColor=#172638;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="100" y="44" width="2400" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Hệ thống phát hiện không đội mũ bảo hiểm" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=28;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="100" y="105" width="2300" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="source_note" value="Nguồn: backend/helmet_detection.db  •  SQLite hiện tại  •  6 bảng / 62 cột / 5 khóa ngoại" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=23;fontColor=#526170;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="100" y="145" width="2400" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="table_users" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#a6b1bc;strokeWidth=2;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="1" table_name="users">
+          <mxGeometry x="100" y="210" width="660" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="header_users" value="" style="rounded=0;fillColor=#172638;strokeColor=none;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="0" y="0" width="660" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="name_users" value="users" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=29;fontColor=#ffffff;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="18" y="8" width="440" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="meaning_users" value="Người dùng" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#d9e2ea;fontStyle=0;align=right;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="425" y="11" width="217" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_users" value="" style="rounded=0;fillColor=#eef1f4;strokeColor=none;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="1" y="52" width="658" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_users_key" value="Khóa" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="12" y="55" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_users_column" value="Tên cột" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="94" y="55" width="302" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_users_type" value="Kiểu dữ liệu" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="404" y="55" width="177" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_users_null" value="NULL" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="588" y="55" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_id" value="" style="rounded=0;fillColor=#eaf2f8;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_users" column_name="id" data_type="INTEGER" nullable="false" key_kind="PK">
+          <mxGeometry x="1" y="90" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_id_key" value="PK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_id_name" value="id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_username" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_users" column_name="username" data_type="VARCHAR(32)" nullable="false" key_kind="UQ">
+          <mxGeometry x="1" y="124" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_username_key" value="UQ" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_username" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_username_name" value="username" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_username" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_username_type" value="VARCHAR(32)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_username" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_username_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_username" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_password_hash" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_users" column_name="password_hash" data_type="VARCHAR(255)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="158" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_password_hash_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_password_hash" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_password_hash_name" value="password_hash" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_password_hash" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_password_hash_type" value="VARCHAR(255)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_password_hash" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_password_hash_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_password_hash" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_created_at" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_users" column_name="created_at" data_type="DATETIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="192" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_created_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_created_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_created_at_name" value="created_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_created_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_created_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_created_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_users_created_at_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_users_created_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints_users" value="UNIQUE (username)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=20;fontColor=#285d89;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="14" y="230" width="634" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="note_users" value="PK: id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#526170;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_users" connectable="0">
+          <mxGeometry x="14" y="256" width="634" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="table_projects" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#a6b1bc;strokeWidth=2;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="1" table_name="projects">
+          <mxGeometry x="1000" y="210" width="660" height="358" as="geometry" />
+        </mxCell>
+        <mxCell id="header_projects" value="" style="rounded=0;fillColor=#172638;strokeColor=none;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="0" y="0" width="660" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="name_projects" value="projects" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=29;fontColor=#ffffff;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="18" y="8" width="440" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="meaning_projects" value="Dự án" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#d9e2ea;fontStyle=0;align=right;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="425" y="11" width="217" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_projects" value="" style="rounded=0;fillColor=#eef1f4;strokeColor=none;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="1" y="52" width="658" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_projects_key" value="Khóa" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="12" y="55" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_projects_column" value="Tên cột" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="94" y="55" width="302" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_projects_type" value="Kiểu dữ liệu" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="404" y="55" width="177" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_projects_null" value="NULL" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="588" y="55" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_id" value="" style="rounded=0;fillColor=#eaf2f8;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_projects" column_name="id" data_type="INTEGER" nullable="false" key_kind="PK">
+          <mxGeometry x="1" y="90" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_id_key" value="PK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_id_name" value="id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_name" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_projects" column_name="name" data_type="VARCHAR(255)" nullable="false" key_kind="UQ">
+          <mxGeometry x="1" y="124" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_name_key" value="UQ" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_name" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_name_name" value="name" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_name" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_name_type" value="VARCHAR(255)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_name" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_name_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_name" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_description" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_projects" column_name="description" data_type="TEXT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="158" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_description_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_description" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_description_name" value="description" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_description" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_description_type" value="TEXT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_description" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_description_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_description" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_created_at" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_projects" column_name="created_at" data_type="DATETIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="192" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_created_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_created_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_created_at_name" value="created_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_created_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_created_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_created_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_created_at_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_created_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_updated_at" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_projects" column_name="updated_at" data_type="DATETIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="226" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_updated_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_updated_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_updated_at_name" value="updated_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_updated_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_updated_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_updated_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_updated_at_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_updated_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_owner_id" value="" style="rounded=0;fillColor=#fff7ea;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_projects" column_name="owner_id" data_type="INTEGER" nullable="true" key_kind="REF*">
+          <mxGeometry x="1" y="260" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_owner_id_key" value="REF*" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#936126;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_owner_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_owner_id_name" value="owner_id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_owner_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_owner_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_owner_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_projects_owner_id_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_projects_owner_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints_projects" value="UNIQUE (name)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=20;fontColor=#285d89;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="14" y="298" width="634" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="note_projects" value="* owner_id: tham chiếu theo ORM, chưa có FK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#936126;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_projects" connectable="0">
+          <mxGeometry x="14" y="324" width="634" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="table_locations" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#a6b1bc;strokeWidth=2;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="1" table_name="locations">
+          <mxGeometry x="1900" y="210" width="660" height="426" as="geometry" />
+        </mxCell>
+        <mxCell id="header_locations" value="" style="rounded=0;fillColor=#172638;strokeColor=none;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="0" y="0" width="660" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="name_locations" value="locations" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=29;fontColor=#ffffff;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="18" y="8" width="440" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="meaning_locations" value="Địa điểm" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#d9e2ea;fontStyle=0;align=right;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="425" y="11" width="217" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_locations" value="" style="rounded=0;fillColor=#eef1f4;strokeColor=none;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="1" y="52" width="658" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_locations_key" value="Khóa" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="12" y="55" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_locations_column" value="Tên cột" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="94" y="55" width="302" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_locations_type" value="Kiểu dữ liệu" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="404" y="55" width="177" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_locations_null" value="NULL" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="588" y="55" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_id" value="" style="rounded=0;fillColor=#eaf2f8;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_locations" column_name="id" data_type="INTEGER" nullable="false" key_kind="PK">
+          <mxGeometry x="1" y="90" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_id_key" value="PK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_id_name" value="id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_project_id" value="" style="rounded=0;fillColor=#f4f8fc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_locations" column_name="project_id" data_type="INTEGER" nullable="false" key_kind="FK">
+          <mxGeometry x="1" y="124" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_project_id_key" value="FK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_project_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_project_id_name" value="project_id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_project_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_project_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_project_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_project_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_project_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_name" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_locations" column_name="name" data_type="VARCHAR(255)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="158" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_name_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_name" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_name_name" value="name" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_name" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_name_type" value="VARCHAR(255)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_name" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_name_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_name" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_description" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_locations" column_name="description" data_type="TEXT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="192" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_description_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_description" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_description_name" value="description" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_description" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_description_type" value="TEXT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_description" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_description_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_description" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_latitude" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_locations" column_name="latitude" data_type="FLOAT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="226" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_latitude_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_latitude" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_latitude_name" value="latitude" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_latitude" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_latitude_type" value="FLOAT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_latitude" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_latitude_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_latitude" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_longitude" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_locations" column_name="longitude" data_type="FLOAT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="260" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_longitude_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_longitude" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_longitude_name" value="longitude" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_longitude" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_longitude_type" value="FLOAT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_longitude" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_longitude_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_longitude" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_created_at" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_locations" column_name="created_at" data_type="DATETIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="294" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_created_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_created_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_created_at_name" value="created_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_created_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_created_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_created_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_created_at_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_created_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_updated_at" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_locations" column_name="updated_at" data_type="DATETIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="328" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_updated_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_updated_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_updated_at_name" value="updated_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_updated_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_updated_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_updated_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_locations_updated_at_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_locations_updated_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints_locations" value="UNIQUE (project_id, name)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=20;fontColor=#285d89;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="14" y="366" width="634" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="note_locations" value="ON DELETE CASCADE" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#526170;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_locations" connectable="0">
+          <mxGeometry x="14" y="392" width="634" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="table_analysis_sessions" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#a6b1bc;strokeWidth=2;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="1" table_name="analysis_sessions">
+          <mxGeometry x="1900" y="800" width="660" height="766" as="geometry" />
+        </mxCell>
+        <mxCell id="header_analysis_sessions" value="" style="rounded=0;fillColor=#172638;strokeColor=none;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="0" y="0" width="660" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="name_analysis_sessions" value="analysis_sessions" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=29;fontColor=#ffffff;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="18" y="8" width="440" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="meaning_analysis_sessions" value="Phiên phân tích" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#d9e2ea;fontStyle=0;align=right;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="425" y="11" width="217" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_analysis_sessions" value="" style="rounded=0;fillColor=#eef1f4;strokeColor=none;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="1" y="52" width="658" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_analysis_sessions_key" value="Khóa" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="12" y="55" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_analysis_sessions_column" value="Tên cột" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="94" y="55" width="302" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_analysis_sessions_type" value="Kiểu dữ liệu" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="404" y="55" width="177" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_analysis_sessions_null" value="NULL" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="588" y="55" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_id" value="" style="rounded=0;fillColor=#eaf2f8;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="id" data_type="INTEGER" nullable="false" key_kind="PK">
+          <mxGeometry x="1" y="90" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_id_key" value="PK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_id_name" value="id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_location_id" value="" style="rounded=0;fillColor=#f4f8fc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="location_id" data_type="INTEGER" nullable="false" key_kind="FK">
+          <mxGeometry x="1" y="124" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_location_id_key" value="FK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_location_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_location_id_name" value="location_id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_location_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_location_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_location_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_location_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_location_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_analysis_date" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="analysis_date" data_type="DATE" nullable="false" key_kind="">
+          <mxGeometry x="1" y="158" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_analysis_date_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_analysis_date" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_analysis_date_name" value="analysis_date" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_analysis_date" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_analysis_date_type" value="DATE" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_analysis_date" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_analysis_date_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_analysis_date" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_start_time" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="start_time" data_type="TIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="192" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_start_time_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_start_time" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_start_time_name" value="start_time" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_start_time" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_start_time_type" value="TIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_start_time" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_start_time_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_start_time" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_end_time" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="end_time" data_type="TIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="226" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_end_time_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_end_time" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_end_time_name" value="end_time" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_end_time" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_end_time_type" value="TIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_end_time" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_end_time_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_end_time" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_files" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="total_files" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="260" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_files_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_total_files" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_files_name" value="total_files" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_total_files" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_files_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_total_files" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_files_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_total_files" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_processed_files" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="processed_files" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="294" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_processed_files_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_processed_files" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_processed_files_name" value="processed_files" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_processed_files" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_processed_files_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_processed_files" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_processed_files_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_processed_files" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_vehicles" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="total_vehicles" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="328" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_vehicles_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_total_vehicles" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_vehicles_name" value="total_vehicles" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_total_vehicles" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_vehicles_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_total_vehicles" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_total_vehicles_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_total_vehicles" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_helmet_count" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="helmet_count" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="362" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_helmet_count_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_helmet_count" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_helmet_count_name" value="helmet_count" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_helmet_count" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_helmet_count_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_helmet_count" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_helmet_count_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_helmet_count" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_no_helmet_count" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="no_helmet_count" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="396" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_no_helmet_count_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_no_helmet_count" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_no_helmet_count_name" value="no_helmet_count" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_no_helmet_count" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_no_helmet_count_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_no_helmet_count" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_no_helmet_count_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_no_helmet_count" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_count" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="violation_count" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="430" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_count_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_violation_count" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_count_name" value="violation_count" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_violation_count" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_count_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_violation_count" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_count_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_violation_count" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_rate" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="violation_rate" data_type="FLOAT" nullable="false" key_kind="">
+          <mxGeometry x="1" y="464" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_rate_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_violation_rate" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_rate_name" value="violation_rate" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_violation_rate" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_rate_type" value="FLOAT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_violation_rate" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_violation_rate_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_violation_rate" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_status" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="status" data_type="VARCHAR(32)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="498" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_status_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_status" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_status_name" value="status" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_status" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_status_type" value="VARCHAR(32)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_status" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_status_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_status" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_progress" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="progress" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="532" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_progress_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_progress" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_progress_name" value="progress" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_progress" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_progress_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_progress" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_progress_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_progress" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_error_message" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="error_message" data_type="TEXT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="566" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_error_message_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_error_message" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_error_message_name" value="error_message" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_error_message" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_error_message_type" value="TEXT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_error_message" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_error_message_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_error_message" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_created_at" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="created_at" data_type="DATETIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="600" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_created_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_created_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_created_at_name" value="created_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_created_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_created_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_created_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_created_at_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_created_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_completed_at" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="completed_at" data_type="DATETIME" nullable="true" key_kind="">
+          <mxGeometry x="1" y="634" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_completed_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_completed_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_completed_at_name" value="completed_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_completed_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_completed_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_completed_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_completed_at_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_completed_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_hourly_violations_json" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_analysis_sessions" column_name="hourly_violations_json" data_type="TEXT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="668" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_hourly_violations_json_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_hourly_violations_json" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_hourly_violations_json_name" value="hourly_violations_json" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_hourly_violations_json" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_hourly_violations_json_type" value="TEXT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_hourly_violations_json" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_analysis_sessions_hourly_violations_json_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_analysis_sessions_hourly_violations_json" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints_analysis_sessions" value="FK: location_id → locations.id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=20;fontColor=#285d89;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="14" y="706" width="634" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="note_analysis_sessions" value="ON DELETE CASCADE" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#526170;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_analysis_sessions" connectable="0">
+          <mxGeometry x="14" y="732" width="634" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="table_media_files" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#a6b1bc;strokeWidth=2;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="1" table_name="media_files">
+          <mxGeometry x="1000" y="800" width="660" height="664" as="geometry" />
+        </mxCell>
+        <mxCell id="header_media_files" value="" style="rounded=0;fillColor=#172638;strokeColor=none;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="0" y="0" width="660" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="name_media_files" value="media_files" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=29;fontColor=#ffffff;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="18" y="8" width="440" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="meaning_media_files" value="Tệp ảnh / video" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#d9e2ea;fontStyle=0;align=right;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="425" y="11" width="217" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_media_files" value="" style="rounded=0;fillColor=#eef1f4;strokeColor=none;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="1" y="52" width="658" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_media_files_key" value="Khóa" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="12" y="55" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_media_files_column" value="Tên cột" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="94" y="55" width="302" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_media_files_type" value="Kiểu dữ liệu" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="404" y="55" width="177" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_media_files_null" value="NULL" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="588" y="55" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_id" value="" style="rounded=0;fillColor=#eaf2f8;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="id" data_type="INTEGER" nullable="false" key_kind="PK">
+          <mxGeometry x="1" y="90" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_id_key" value="PK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_id_name" value="id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_session_id" value="" style="rounded=0;fillColor=#f4f8fc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="session_id" data_type="INTEGER" nullable="false" key_kind="FK">
+          <mxGeometry x="1" y="124" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_session_id_key" value="FK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_session_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_session_id_name" value="session_id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_session_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_session_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_session_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_session_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_session_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_filename" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="original_filename" data_type="VARCHAR(512)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="158" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_filename_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_original_filename" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_filename_name" value="original_filename" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_original_filename" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_filename_type" value="VARCHAR(512)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_original_filename" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_filename_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_original_filename" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_stored_filename" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="stored_filename" data_type="VARCHAR(512)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="192" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_stored_filename_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_stored_filename" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_stored_filename_name" value="stored_filename" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_stored_filename" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_stored_filename_type" value="VARCHAR(512)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_stored_filename" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_stored_filename_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_stored_filename" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_file_type" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="file_type" data_type="VARCHAR(16)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="226" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_file_type_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_file_type" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_file_type_name" value="file_type" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_file_type" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_file_type_type" value="VARCHAR(16)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_file_type" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_file_type_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_file_type" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_path" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="original_path" data_type="VARCHAR(1024)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="260" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_path_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_original_path" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_path_name" value="original_path" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_original_path" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_path_type" value="VARCHAR(1024)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_original_path" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_original_path_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_original_path" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_result_path" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="result_path" data_type="VARCHAR(1024)" nullable="true" key_kind="">
+          <mxGeometry x="1" y="294" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_result_path_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_result_path" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_result_path_name" value="result_path" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_result_path" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_result_path_type" value="VARCHAR(1024)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_result_path" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_result_path_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_result_path" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_status" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="status" data_type="VARCHAR(32)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="328" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_status_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_status" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_status_name" value="status" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_status" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_status_type" value="VARCHAR(32)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_status" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_status_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_status" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_progress" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="progress" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="362" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_progress_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_progress" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_progress_name" value="progress" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_progress" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_progress_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_progress" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_progress_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_progress" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_total_vehicles" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="total_vehicles" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="396" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_total_vehicles_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_total_vehicles" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_total_vehicles_name" value="total_vehicles" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_total_vehicles" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_total_vehicles_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_total_vehicles" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_total_vehicles_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_total_vehicles" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_helmet_count" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="helmet_count" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="430" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_helmet_count_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_helmet_count" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_helmet_count_name" value="helmet_count" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_helmet_count" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_helmet_count_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_helmet_count" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_helmet_count_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_helmet_count" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_no_helmet_count" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="no_helmet_count" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="464" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_no_helmet_count_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_no_helmet_count" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_no_helmet_count_name" value="no_helmet_count" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_no_helmet_count" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_no_helmet_count_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_no_helmet_count" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_no_helmet_count_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_no_helmet_count" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_violation_count" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="violation_count" data_type="INTEGER" nullable="false" key_kind="">
+          <mxGeometry x="1" y="498" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_violation_count_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_violation_count" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_violation_count_name" value="violation_count" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_violation_count" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_violation_count_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_violation_count" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_violation_count_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_violation_count" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_error_message" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="error_message" data_type="TEXT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="532" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_error_message_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_error_message" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_error_message_name" value="error_message" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_error_message" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_error_message_type" value="TEXT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_error_message" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_error_message_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_error_message" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_created_at" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_media_files" column_name="created_at" data_type="DATETIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="566" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_created_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_created_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_created_at_name" value="created_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_created_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_created_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_created_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_media_files_created_at_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_media_files_created_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints_media_files" value="FK: session_id → analysis_sessions.id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=20;fontColor=#285d89;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="14" y="604" width="634" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="note_media_files" value="ON DELETE CASCADE" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#526170;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_media_files" connectable="0">
+          <mxGeometry x="14" y="630" width="634" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="table_violations" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#a6b1bc;strokeWidth=2;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="1" table_name="violations">
+          <mxGeometry x="100" y="800" width="660" height="528" as="geometry" />
+        </mxCell>
+        <mxCell id="header_violations" value="" style="rounded=0;fillColor=#172638;strokeColor=none;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="0" y="0" width="660" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="name_violations" value="violations" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=29;fontColor=#ffffff;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="18" y="8" width="440" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="meaning_violations" value="Vi phạm" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#d9e2ea;fontStyle=0;align=right;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="425" y="11" width="217" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_violations" value="" style="rounded=0;fillColor=#eef1f4;strokeColor=none;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="1" y="52" width="658" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_violations_key" value="Khóa" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="12" y="55" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_violations_column" value="Tên cột" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="94" y="55" width="302" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_violations_type" value="Kiểu dữ liệu" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="404" y="55" width="177" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="column_header_violations_null" value="NULL" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="588" y="55" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_id" value="" style="rounded=0;fillColor=#eaf2f8;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="id" data_type="INTEGER" nullable="false" key_kind="PK">
+          <mxGeometry x="1" y="90" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_id_key" value="PK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_id_name" value="id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_session_id" value="" style="rounded=0;fillColor=#f4f8fc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="session_id" data_type="INTEGER" nullable="false" key_kind="FK">
+          <mxGeometry x="1" y="124" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_session_id_key" value="FK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_session_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_session_id_name" value="session_id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_session_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_session_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_session_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_session_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_session_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_media_id" value="" style="rounded=0;fillColor=#f4f8fc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="media_id" data_type="INTEGER" nullable="false" key_kind="FK">
+          <mxGeometry x="1" y="158" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_media_id_key" value="FK" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_media_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_media_id_name" value="media_id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_media_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_media_id_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_media_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_media_id_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_media_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_vehicle_id" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="vehicle_id" data_type="VARCHAR(128)" nullable="true" key_kind="">
+          <mxGeometry x="1" y="192" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_vehicle_id_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_vehicle_id" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_vehicle_id_name" value="vehicle_id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_vehicle_id" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_vehicle_id_type" value="VARCHAR(128)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_vehicle_id" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_vehicle_id_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_vehicle_id" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_frame_number" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="frame_number" data_type="INTEGER" nullable="true" key_kind="">
+          <mxGeometry x="1" y="226" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_frame_number_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_frame_number" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_frame_number_name" value="frame_number" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_frame_number" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_frame_number_type" value="INTEGER" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_frame_number" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_frame_number_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_frame_number" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_timestamp_seconds" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="timestamp_seconds" data_type="FLOAT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="260" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_timestamp_seconds_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_timestamp_seconds" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_timestamp_seconds_name" value="timestamp_seconds" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_timestamp_seconds" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_timestamp_seconds_type" value="FLOAT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_timestamp_seconds" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_timestamp_seconds_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_timestamp_seconds" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_confidence" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="confidence" data_type="FLOAT" nullable="false" key_kind="">
+          <mxGeometry x="1" y="294" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_confidence_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_confidence" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_confidence_name" value="confidence" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_confidence" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_confidence_type" value="FLOAT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_confidence" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_confidence_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_confidence" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_status" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="status" data_type="VARCHAR(64)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="328" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_status_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_status" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_status_name" value="status" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_status" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_status_type" value="VARCHAR(64)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_status" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_status_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_status" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_evidence_path" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="evidence_path" data_type="VARCHAR(1024)" nullable="false" key_kind="">
+          <mxGeometry x="1" y="362" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_evidence_path_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_evidence_path" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_evidence_path_name" value="evidence_path" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_evidence_path" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_evidence_path_type" value="VARCHAR(1024)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_evidence_path" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_evidence_path_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_evidence_path" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_bbox_json" value="" style="rounded=0;fillColor=#fafbfc;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="bbox_json" data_type="TEXT" nullable="true" key_kind="">
+          <mxGeometry x="1" y="396" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_bbox_json_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_bbox_json" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_bbox_json_name" value="bbox_json" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_bbox_json" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_bbox_json_type" value="TEXT" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_bbox_json" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_bbox_json_null" value="Có" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_bbox_json" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_created_at" value="" style="rounded=0;fillColor=#ffffff;strokeColor=#e1e6eb;strokeWidth=0.5;container=1;collapsible=0;recursiveResize=1;" vertex="1" parent="table_violations" column_name="created_at" data_type="DATETIME" nullable="false" key_kind="">
+          <mxGeometry x="1" y="430" width="658" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_created_at_key" value="" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#285d89;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_created_at" connectable="0">
+          <mxGeometry x="11" y="1" width="72" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_created_at_name" value="created_at" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_created_at" connectable="0">
+          <mxGeometry x="93" y="1" width="305" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_created_at_type" value="DATETIME" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=22;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_created_at" connectable="0">
+          <mxGeometry x="403" y="1" width="178" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="row_violations_created_at_null" value="—" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=21;fontColor=#526170;fontStyle=0;align=center;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="row_violations_created_at" connectable="0">
+          <mxGeometry x="584" y="1" width="62" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints_violations" value="FK: session_id, media_id" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Consolas;fontSize=20;fontColor=#285d89;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="14" y="468" width="634" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="note_violations" value="ON DELETE CASCADE" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=20;fontColor=#526170;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="table_violations" connectable="0">
+          <mxGeometry x="14" y="494" width="634" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="orm_users_projects" value="ORM*" style="edgeStyle=segmentEdgeStyle;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#936126;strokeWidth=3;fontFamily=Arial;fontSize=21;fontColor=#936126;dashed=1;dashPattern=10 7;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" source="row_users_id" target="row_projects_owner_id" relation_kind="ORM_REFERENCE">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="870" y="317" />
+              <mxPoint x="870" y="487" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orm_users_projects_one" value="0..1" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#936126;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="orm_users_projects">
+          <mxGeometry x="-1" y="0" relative="1" as="geometry">
+            <mxPoint x="46" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orm_users_projects_many" value="0..N" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#936126;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="orm_users_projects">
+          <mxGeometry x="1" y="0" relative="1" as="geometry">
+            <mxPoint x="-46" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_projects_locations" value="" style="edgeStyle=segmentEdgeStyle;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#285d89;strokeWidth=3;fontFamily=Arial;fontSize=21;fontColor=#285d89;dashed=0;dashPattern=10 7;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" source="row_projects_id" target="row_locations_project_id" relation_kind="FOREIGN_KEY">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1770" y="317" />
+              <mxPoint x="1770" y="351" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_projects_locations_one" value="1" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_projects_locations">
+          <mxGeometry x="-1" y="0" relative="1" as="geometry">
+            <mxPoint x="27" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_projects_locations_many" value="0..N" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_projects_locations">
+          <mxGeometry x="1" y="0" relative="1" as="geometry">
+            <mxPoint x="-46" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_locations_sessions" value="" style="edgeStyle=segmentEdgeStyle;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#285d89;strokeWidth=3;fontFamily=Arial;fontSize=21;fontColor=#285d89;dashed=0;dashPattern=10 7;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" source="row_locations_id" target="row_analysis_sessions_location_id" relation_kind="FOREIGN_KEY">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2615" y="317" />
+              <mxPoint x="2615" y="941" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_locations_sessions_one" value="1" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_locations_sessions">
+          <mxGeometry x="-1" y="0" relative="1" as="geometry">
+            <mxPoint x="27" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_locations_sessions_many" value="0..N" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_locations_sessions">
+          <mxGeometry x="1" y="0" relative="1" as="geometry">
+            <mxPoint x="46" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_sessions_media" value="" style="edgeStyle=segmentEdgeStyle;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#285d89;strokeWidth=3;fontFamily=Arial;fontSize=21;fontColor=#285d89;dashed=0;dashPattern=10 7;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" source="row_analysis_sessions_id" target="row_media_files_session_id" relation_kind="FOREIGN_KEY">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1780" y="907" />
+              <mxPoint x="1780" y="941" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_sessions_media_one" value="1" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_sessions_media">
+          <mxGeometry x="-1" y="0" relative="1" as="geometry">
+            <mxPoint x="-27" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_sessions_media_many" value="0..N" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_sessions_media">
+          <mxGeometry x="1" y="0" relative="1" as="geometry">
+            <mxPoint x="46" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_sessions_violations" value="analysis_sessions.id → violations.session_id" style="edgeStyle=segmentEdgeStyle;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#285d89;strokeWidth=3;fontFamily=Arial;fontSize=21;fontColor=#285d89;dashed=0;dashPattern=10 7;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" source="row_analysis_sessions_id" target="row_violations_session_id" relation_kind="FOREIGN_KEY">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1840" y="907" />
+              <mxPoint x="1840" y="715" />
+              <mxPoint x="30" y="715" />
+              <mxPoint x="30" y="941" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_sessions_violations_one" value="1" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_sessions_violations">
+          <mxGeometry x="-1" y="0" relative="1" as="geometry">
+            <mxPoint x="-27" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_sessions_violations_many" value="0..N" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_sessions_violations">
+          <mxGeometry x="1" y="0" relative="1" as="geometry">
+            <mxPoint x="-46" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_media_violations" value="" style="edgeStyle=segmentEdgeStyle;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#285d89;strokeWidth=3;fontFamily=Arial;fontSize=21;fontColor=#285d89;dashed=0;dashPattern=10 7;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" source="row_media_files_id" target="row_violations_media_id" relation_kind="FOREIGN_KEY">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="907" />
+              <mxPoint x="880" y="975" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_media_violations_one" value="1" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_media_violations">
+          <mxGeometry x="-1" y="0" relative="1" as="geometry">
+            <mxPoint x="-27" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fk_media_violations_many" value="0..N" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=22;fontColor=#285d89;fontStyle=1;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="fk_media_violations">
+          <mxGeometry x="1" y="0" relative="1" as="geometry">
+            <mxPoint x="46" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend_separator" value="" style="fillColor=#a6b1bc;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1645" width="2460" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_heading" value="CHÚ GIẢI" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=25;fontColor=#172638;fontStyle=1;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="100" y="1665" width="2300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_keys" value="PK: khóa chính  •  FK: khóa ngoại  •  UQ: duy nhất  •  NULL: Có = cho phép NULL; — = NOT NULL  •  0..N: không có hoặc nhiều bản ghi" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=24;fontColor=#172638;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="100" y="1705" width="2460" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_fk" value="Đường liền: khóa ngoại thực tế — ON DELETE CASCADE; ON UPDATE NO ACTION." style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=23;fontColor=#285d89;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="100" y="1752" width="2460" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_orm" value="Đường nét đứt / REF* / ORM*: liên kết chỉ có trong model; SQLite chưa ràng buộc projects.owner_id → users.id." style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=nowrap;overflow=visible;fontFamily=Arial;fontSize=23;fontColor=#936126;fontStyle=0;align=left;verticalAlign=middle;spacing=0;connectable=0;" vertex="1" parent="1" connectable="0">
+          <mxGeometry x="100" y="1794" width="2460" height="33" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

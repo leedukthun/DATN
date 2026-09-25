@@ -1,0 +1,38 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/Scripts/python.exe",
+  "python.envFile": "${workspaceFolder}/backend/.env",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/backend"
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.cwd": "${workspaceFolder}/backend",
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "typescript.tsdk": "${workspaceFolder}/frontend/node_modules/typescript/lib",
+  "npm.packageManager": "npm",
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "backend/.venv": true,
+    "frontend/node_modules": true,
+    "frontend/dist": true
+  },
+  "search.exclude": {
+    "backend/.venv": true,
+    "frontend/node_modules": true,
+    "frontend/dist": true,
+    "backend/storage/uploads": true,
+    "backend/storage/results": true,
+    "backend/storage/violations": true,
+    "backend/storage/exports": true
+  },
+  "files.associations": {
+    ".env": "dotenv"
+  }
+}

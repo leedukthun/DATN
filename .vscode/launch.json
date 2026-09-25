@@ -1,0 +1,56 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend: FastAPI (Debug)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "app.main:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--reload"
+      ],
+      "cwd": "${workspaceFolder}/backend",
+      "envFile": "${workspaceFolder}/backend/.env",
+      "python": "${workspaceFolder}/backend/.venv/Scripts/python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "subProcess": true,
+      "presentation": {
+        "group": "helmet-detection",
+        "order": 1
+      }
+    },
+    {
+      "name": "Frontend: React + Vite",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}/frontend",
+      "serverReadyAction": {
+        "pattern": "(http://localhost:5173/?)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      },
+      "presentation": {
+        "group": "helmet-detection",
+        "order": 2
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Toàn hệ thống: Backend + Frontend",
+      "configurations": [
+        "Backend: FastAPI (Debug)",
+        "Frontend: React + Vite"
+      ],
+      "preLaunchTask": "VS Code: Cài đặt / cập nhật môi trường",
+      "stopAll": true
+    }
+  ]
+}

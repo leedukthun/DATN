@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "name": "Hệ thống phát hiện không đội mũ",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "window.title": "Phát hiện không đội mũ — ${dirty}${activeEditorShort}${separator}${rootName}"
+  }
+}
