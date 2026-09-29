@@ -1,61 +1,45 @@
+# Application directories and entry points
+/*
+!/.gitignore
+!/README.md
+!/backend/
+!/frontend/
+!/install_windows.bat
+!/run_windows.bat
+
 # Python
 __pycache__/
 *.py[cod]
 .venv/
 .pytest_cache/
-backend/.env
-frontend/.env
-backend/helmet_detection.db
+/backend/tests/
+/backend/pytest.ini
+/backend/requirements-dev.txt
 
-# Storage generated at runtime
-backend/storage/uploads/*
-backend/storage/results/*
-backend/storage/violations/*
-backend/storage/exports/*
-backend/storage/diagnostics/
-!backend/storage/**/.gitkeep
+# Local configuration and database
+.env
+.env.*
+!.env.example
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite3
 
-# Node
-frontend/node_modules/
-frontend/dist/
-frontend/*.tsbuildinfo
-frontend/vite.config.js
-frontend/vite.config.d.ts
-frontend/.env.local
+# Files generated during use
+/backend/storage/**
+!/backend/storage/**/
+!/backend/storage/**/.gitkeep
 
-# Editors / OS
-.idea/
+# Frontend dependencies and build output
+node_modules/
+/frontend/dist/
+*.tsbuildinfo
+/frontend/vite.config.js
+/frontend/vite.config.d.ts
+
+# Temporary files
+*.log
 .DS_Store
 Thumbs.db
-
-# VS Code machine-local overrides
-.vscode/*.local.json
-
-# Local reports, training notebooks and generated document images
-*.doc
-*.docx
-*.dox
-*.pdf
-*.ipynb
-/docs/
-/ch2_build/
-/chapter1_render/
-/review_ch23/
-/review_full_*/
-/chapter1_shortened.py
-/fix_auth.js
-
-# Development notes not needed to install or run the application
-/DOWNLOAD_BUG_FIX.md
-/DOWNLOAD_QUICK_FIX.md
-/IMPLEMENTATION_NOTES.md
-/INDEX_OPTIMIZATION.md
-/QUICK_OPTIMIZATION.md
-/TESTING_VALIDATION.md
-/VIDEO_OPTIMIZATION_GUIDE.md
-
-# Standalone local images (application assets remain trackable)
-/*.png
-/*.jpg
-/*.jpeg
-/*.webp
