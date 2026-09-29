@@ -7,7 +7,7 @@ from sqlalchemy import text
 
 from app.core.config import settings
 from app.core.database import engine
-from app.services.ai.detector import Detector
+from app.services.analysis_service import get_detector
 from app.utils.files import ensure_storage_directories
 
 
@@ -44,17 +44,16 @@ def main() -> None:
         fail(f"Khong ket noi duoc database: {exc}")
     ok("Database ket noi thanh cong")
 
-    detector = Detector(
-        settings.model_path,
-        settings.confidence_threshold,
-        settings.iou_threshold,
-        settings.device,
-    )
+    detector = get_detector()
     try:
         names = detector.class_names
     except Exception as exc:
         fail(f"Khong nap duoc Ultralytics/model: {exc}")
     ok(f"Nap model thanh cong. Classes: {names}")
+    if detector.vehicle is None:
+        print(f"[CANH BAO] Khong co model xe may ({settings.vehicle_model_path}); nguoi di bo co the bi tinh nham.")
+    primary = detector.primary
+    ok(f"Thiet bi: {primary.device} | imgsz {primary.imgsz} | tiles {primary.tiles}x{primary.tiles}")
 
     print("\nHe thong san sang. Chay python run.py va npm run dev.")
 

@@ -112,6 +112,20 @@ def save_image(path: Path, image: np.ndarray) -> None:
         raise RuntimeError(f"Không thể lưu ảnh kết quả: {path}")
 
 
+EVIDENCE_MIN_SIDE = 360
+EVIDENCE_MAX_UPSCALE = 4.0
+EVIDENCE_BAND_HEIGHT = 34
+
+
+def _band(width: int, text: str, color: tuple[int, int, int]) -> np.ndarray:
+    band = np.full((EVIDENCE_BAND_HEIGHT, width, 3), color, dtype=np.uint8)
+    scale = 0.55
+    while scale > 0.3 and cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, scale, 1)[0][0] > width - 16:
+        scale -= 0.05
+    cv2.putText(band, text, (8, 23), cv2.FONT_HERSHEY_SIMPLEX, scale, (255, 255, 255), 1, cv2.LINE_AA)
+    return band
+
+
 def save_evidence_crop(
     frame: np.ndarray,
     subject: SubjectDetection,
@@ -121,43 +135,41 @@ def save_evidence_crop(
     timestamp_seconds: float | None = None,
 ) -> None:
     x1, y1, x2, y2 = subject.bbox
-    if subject.head_bbox is not None:
-        hx1, hy1, hx2, hy2 = subject.head_bbox
-        x1, y1, x2, y2 = min(x1, hx1), min(y1, hy1), max(x2, hx2), max(y2, hy2)
+    for extra_box in (subject.head_bbox, subject.vehicle_bbox):
+        if extra_box is not None:
+            ex1, ey1, ex2, ey2 = extra_box
+            x1, y1, x2, y2 = min(x1, ex1), min(y1, ey1), max(x2, ex2), max(y2, ey2)
     width = max(1, x2 - x1)
     height = max(1, y2 - y1)
-    padding_x = int(width * 0.45)
-    padding_y = int(height * 0.55)
-    crop_box = _clip_bbox((x1 - padding_x, y1 - padding_y, x2 + padding_x, y2 + padding_y), frame.shape)
-    cx1, cy1, cx2, cy2 = crop_box
+    # Heads in CCTV footage are tiny; keep a minimum amount of surrounding context.
+    padding_x = max(int(width * 0.45), 40)
+    padding_y = max(int(height * 0.55), 40)
+    cx1, cy1, cx2, cy2 = _clip_bbox((x1 - padding_x, y1 - padding_y, x2 + padding_x, y2 + padding_y), frame.shape)
     crop = frame[cy1:cy2, cx1:cx2].copy()
 
-    relative_subject = SubjectDetection(
-        bbox=(
-            max(0, subject.bbox[0] - cx1),
-            max(0, subject.bbox[1] - cy1),
-            min(crop.shape[1], subject.bbox[2] - cx1),
-            min(crop.shape[0], subject.bbox[3] - cy1),
-        ),
-        confidence=subject.confidence,
-        status=subject.status,
-        source_label=subject.source_label,
-        head_bbox=None,
-    )
-    draw_subject(crop, relative_subject, track_id=track_id)
-    extra = "VI PHAM: KHONG DOI MU"
+    scale = min(EVIDENCE_MAX_UPSCALE, max(1.0, EVIDENCE_MIN_SIDE / max(1, min(crop.shape[:2]))))
+    if scale > 1.0:
+        crop = cv2.resize(crop, None, fx=scale, fy=scale, interpolation=cv2.INTER_CUBIC)
+
+    def to_crop(box: tuple[int, int, int, int]) -> tuple[int, int]:
+        bx1, by1, bx2, by2 = box
+        return (int((bx1 - cx1) * scale), int((by1 - cy1) * scale)), (int((bx2 - cx1) * scale), int((by2 - cy1) * scale))
+
+    # Draw outlines only; labels go in separate bands so they never cover the rider's head.
+    color = COLORS.get(subject.status, COLORS[DetectionKind.UNKNOWN])
+    if subject.vehicle_bbox is not None:
+        cv2.rectangle(crop, *to_crop(subject.vehicle_bbox), COLORS[DetectionKind.VEHICLE], 1)
+    cv2.rectangle(crop, *to_crop(subject.bbox), color, 2)
+    if subject.head_bbox is not None and subject.head_bbox != subject.bbox:
+        cv2.rectangle(crop, *to_crop(subject.head_bbox), COLORS[DetectionKind.NO_HELMET], 2)
+
+    header = f"{LABELS.get(subject.status, subject.status.value)} {subject.confidence:.2f}"
+    if track_id is not None:
+        header = f"ID {track_id:03d} | {header}"
+    footer = "VI PHAM: KHONG DOI MU"
     if timestamp_seconds is not None:
         minutes = int(timestamp_seconds // 60)
         seconds = timestamp_seconds - minutes * 60
-        extra += f" | {minutes:02d}:{seconds:05.2f}"
-    cv2.putText(
-        crop,
-        extra,
-        (12, max(24, crop.shape[0] - 14)),
-        cv2.FONT_HERSHEY_SIMPLEX,
-        0.55,
-        (255, 255, 255),
-        2,
-        cv2.LINE_AA,
-    )
-    save_image(destination, crop)
+        footer += f" | {minutes:02d}:{seconds:05.2f}"
+    evidence = np.vstack([_band(crop.shape[1], header, color), crop, _band(crop.shape[1], footer, (10, 18, 32))])
+    save_image(destination, evidence)

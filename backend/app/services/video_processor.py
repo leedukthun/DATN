@@ -11,7 +11,7 @@ import numpy as np
 
 from app.core.config import settings
 from app.services.ai.detector import Detector
-from app.services.ai.tracker import CentroidTracker
+from app.services.ai.tracker import CentroidTracker, TrackedSubject
 from app.services.ai.violation import DetectionKind, ViolationLogic
 from app.services.evidence_service import draw_subject, draw_summary, save_evidence_crop
 from app.services.processing_types import ProcessResult, ViolationArtifact
@@ -119,6 +119,11 @@ def process_video(
         max_missing=settings.track_max_missing,
         max_distance_ratio=settings.track_max_distance_ratio,
         confirmation_frames=settings.violation_confirmation_frames,
+        window_frames=settings.violation_window_frames,
+        min_no_helmet_ratio=settings.violation_min_ratio,
+        min_hits=settings.track_min_hits,
+        min_speed=settings.track_min_speed,
+        use_vehicle_evidence=violation_logic.require_vehicle,
     )
     evidence_dir = (
         settings.storage_root
@@ -139,6 +144,7 @@ def process_video(
 
     frame_index = 0
     current_frame = first_frame
+    last_tracked = []
     try:
         while True:
             infer_this_frame = frame_index % adaptive_stride == 0
@@ -146,11 +152,22 @@ def process_video(
             
             if infer_this_frame:
                 detections = detector.predict(current_frame)
-                subjects = violation_logic.build_subjects(detections)
-                tracked_subjects = tracker.update(subjects, current_frame.shape)
+                subjects = violation_logic.build_head_observations(detections, current_frame.shape)
+                tracked_subjects = tracker.update(subjects, current_frame.shape, timestamp=frame_index / fps)
+                # Keep boxes of briefly lost tracks so riders do not blink out when the detector misses them.
+                held = [
+                    TrackedSubject(track.track_id, track.last_subject, False)
+                    for track in tracker.active.values()
+                    if 0 < track.missing <= settings.track_display_hold and track.last_subject is not None
+                ]
+                last_tracked = [item for item in tracked_subjects + held if tracker.should_display(item)]
+                for item in held:
+                    if tracker.should_display(item):
+                        draw_subject(annotated, item.subject, track_id=item.track_id)
 
                 for tracked in tracked_subjects:
-                    draw_subject(annotated, tracked.subject, track_id=tracked.track_id)
+                    if tracker.should_display(tracked):
+                        draw_subject(annotated, tracked.subject, track_id=tracked.track_id)
                     if (
                         tracked.first_no_helmet
                         and tracked.track_id not in saved_tracks
@@ -174,16 +191,20 @@ def process_video(
                                 timestamp_seconds=timestamp_seconds,
                             )
                         )
+            else:
+                # Keep boxes on skipped frames so the output video does not flicker.
+                for tracked in last_tracked:
+                    draw_subject(annotated, tracked.subject, track_id=tracked.track_id)
 
-                total, helmet, no_helmet = tracker.summary()
-                draw_summary(
-                    annotated,
-                    total=total,
-                    helmet=helmet,
-                    no_helmet=no_helmet,
-                    progress_text=f"Frame {frame_index}",
-                )
-            
+            total, helmet, no_helmet = tracker.summary()
+            draw_summary(
+                annotated,
+                total=total,
+                helmet=helmet,
+                no_helmet=no_helmet,
+                progress_text=f"Frame {frame_index}",
+            )
+
             # Async frame writing
             try:
                 write_queue.put(annotated, timeout=1.0)

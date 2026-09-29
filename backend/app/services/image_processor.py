@@ -28,7 +28,7 @@ def process_image(
         raise ValueError(f"Không thể đọc ảnh: {source_path.name}")
 
     detections = detector.predict(frame)
-    assessment = violation_logic.assess_image(detections)
+    assessment = violation_logic.assess_image(detections, frame.shape)
     annotated = frame.copy()
     for subject in assessment.subjects:
         draw_subject(annotated, subject)

@@ -10,37 +10,67 @@ from sqlalchemy.orm import joinedload, selectinload
 from app.core.config import settings
 from app.core.database import SessionLocal
 from app.models import AnalysisSession, Location, MediaFile, Violation
-from app.services.ai.detector import Detector
+from app.services.ai.detector import CompositeDetector, Detector
 from app.services.ai.violation import ViolationLogic
 from app.services.image_processor import process_image
 from app.services.video_processor import process_video
 from app.utils.files import absolute_storage_path
 
-_detector: Detector | None = None
+_detector: CompositeDetector | None = None
 _violation_logic: ViolationLogic | None = None
+_violation_logic_model = None
 
 
-def get_detector() -> Detector:
+def get_detector() -> CompositeDetector:
     global _detector
     # Recreate detector if model_path changed at runtime (e.g., .env updated)
     if _detector is None or getattr(_detector, "model_path", None) != settings.model_path:
-        _detector = Detector(
-            model_path=settings.model_path,
-            confidence_threshold=settings.confidence_threshold,
-            iou_threshold=settings.iou_threshold,
-            device=settings.device,
+        vehicle = None
+        if settings.vehicle_model_path is not None and settings.vehicle_model_path.exists():
+            vehicle = Detector(
+                model_path=settings.vehicle_model_path,
+                confidence_threshold=settings.vehicle_confidence_threshold,
+                iou_threshold=settings.iou_threshold,
+                device=settings.device,
+                imgsz=settings.inference_imgsz,
+                tiles=settings.vehicle_model_tiles,
+                class_filter=settings.vehicle_model_classes,
+            )
+        _detector = CompositeDetector(
+            Detector(
+                model_path=settings.model_path,
+                confidence_threshold=settings.confidence_threshold,
+                iou_threshold=settings.iou_threshold,
+                device=settings.device,
+                imgsz=settings.inference_imgsz,
+                tiles=settings.inference_tiles,
+            ),
+            vehicle,
         )
     return _detector
 
 
 def get_violation_logic() -> ViolationLogic:
-    global _violation_logic
-    if _violation_logic is None:
-        _violation_logic = ViolationLogic(
+    global _violation_logic, _violation_logic_model
+    # Rebuild alongside the detector, since vehicle association depends on the model's classes.
+    if _violation_logic is None or _violation_logic_model != settings.model_path:
+        logic = ViolationLogic(
             helmet_names=settings.helmet_class_names,
             no_helmet_names=settings.no_helmet_class_names,
             vehicle_names=settings.vehicle_class_names,
+            ignore_zones=settings.ignore_zones,
         )
+        detector = get_detector()
+        if detector.vehicle is not None:
+            # The helmet model's own "bike" class fires on pedestrians seen from above; when a
+            # dedicated motorbike model is loaded, only its boxes count as vehicles.
+            logic.vehicle_names = {logic.normalize(name) for name in settings.vehicle_model_classes}
+        # Requiring a vehicle only makes sense when the loaded model can detect one.
+        logic.require_vehicle = settings.require_vehicle_association and logic.has_vehicle_class(
+            list(detector.class_names.values())
+        )
+        _violation_logic = logic
+        _violation_logic_model = settings.model_path
     return _violation_logic
 
 

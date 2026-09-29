@@ -35,11 +35,16 @@ Trình cài đặt tạo `backend/.env` và `frontend/.env` từ các tệp `.en
 
 | Biến | Mục đích |
 | --- | --- |
-| `MODEL_PATH` | Đường dẫn model, mặc định `./models/best.pt` |
-| `DEVICE` | `cpu` hoặc chỉ số GPU, ví dụ `0` khi PyTorch hỗ trợ CUDA |
-| `CONFIDENCE_THRESHOLD` | Ngưỡng tin cậy nhận diện |
+| `MODEL_PATH` | Model nhận diện mũ, mặc định `./models/best_3class.pt` (YOLO11n: `bike`, `helmet`, `no-helmet`) |
+| `VEHICLE_MODEL_PATH` | Model phụ tìm xe máy, mặc định `./models/yolo11s.pt` (YOLO11s COCO, giấy phép AGPL-3.0). Đầu người phải nằm trên xe máy mới tính là người đi xe, nhờ đó loại người đi bộ. Để trống để tắt |
+| `DEVICE` | `auto` (mặc định) chọn GPU NVIDIA, GPU Apple (`mps`) hoặc CPU; cũng có thể đặt `cpu` hay chỉ số GPU như `0` |
+| `CONFIDENCE_THRESHOLD` | Ngưỡng tin cậy nhận diện, mặc định `0.25` |
+| `INFERENCE_IMGSZ` | Kích thước ảnh khi nhận diện, mặc định `1280`; đầu người trong camera giám sát chỉ khoảng 15–35px |
+| `INFERENCE_TILES` | Chia khung hình thành lưới NxN để bắt người ở xa, mặc định `2`. Chậm hơn khoảng 5 lần; máy chỉ có CPU chậm nên đặt `1` |
 | `DATABASE_URL` | Kết nối cơ sở dữ liệu |
 | `JWT_SECRET` | Khóa ký phiên đăng nhập; thay giá trị mẫu bằng khóa riêng |
+
+Các thiết lập theo dõi và xác nhận vi phạm khác (`VIOLATION_*`, `TRACK_*`, `IGNORE_ZONES`) được giải thích trong `backend/.env.example`. Nếu `backend/.env` được tạo từ bản cũ, hãy cập nhật theo `.env.example` vì bản cũ vẫn trỏ tới `best.pt`.
 
 Database, ảnh/video tải lên và kết quả xử lý được tạo khi sử dụng, không nằm trong repository.
 
